@@ -1,0 +1,14 @@
+framework: mocha
+preRun:
+     command:
+        - npm ci
+preMerge:
+  pattern:
+    - "./js/test/base/test.base.js"
+postMerge:
+  pattern: 
+    - "./js/test/base/test.base.js"
+postRun:
+     command:
+        - node --version
+version: 1.0
